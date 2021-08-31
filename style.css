@@ -1,0 +1,29 @@
+.container {
+  margin: 10px;
+  padding: 5px;
+  height: 600px;
+  width: 1300px;
+  background-color: rgb(13, 200, 233);
+  border: 2px solid black;
+  border-radius: 10px;
+  display: grid;
+  /*grid-template-rows: 120px 120px 120px;
+    grid-template-columns: 120px 120px 120px;*/
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.item {
+  margin: 8px;
+  /*width: 100px;
+    height: 100px;*/
+  background-color: yellow;
+  border: 2px solid magenta;
+  border-radius: 8px;
+}
+#item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}

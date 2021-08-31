@@ -1,0 +1,80 @@
+.container {
+  margin: 10px;
+  padding: 5px;
+  height: 600px;
+  width: 1300px;
+  background-color: rgb(13, 200, 233);
+  border: 2px solid black;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  position: relative;
+  animation-name: me;
+  animation-duration: 2s;
+  animation-iteration-count: 5;
+  margin: 8px;
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  border: 2px solid magenta;
+  border-radius: 8px;
+  /* transition: width 2s, height 3s, border-radius 2s, background-color 2s; */
+  /* transition: ; */
+}
+
+@keyframes me {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  50% {
+    right: 0;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.item:hover {
+  /* width: 500px;
+  height: 500px; */
+  border-radius: 50%;
+  background-color: rgb(216, 14, 235);
+}
+
+.item1 {
+  position: relative;
+  margin: 8px;
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  border: 2px solid magenta;
+  border-radius: 8px;
+  /* transition: all 2s ease-in-out; */
+}
+
+.item1:hover {
+  /* transform: rotateY(360deg); */
+  /* transform: rotateX(360deg);
+  transform: rotate(360deg); */
+  animation-name: rot;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rot {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
